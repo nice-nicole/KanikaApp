@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kanikaapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".View.ImagesActivity"
+            android:label="Spare parts"></activity>
+
+        <activity android:name=".View.shareholderActivity"
+            android:label="Uploading spare parts"/>
+        <activity android:name=".View.UploadActivity" />
+
+        <activity android:name=".View.SignupActivity"
+            android:label="signup"/>
+        <activity android:name=".View.LoginActivity"
+            android:label="login"/>
+        <activity
+            android:name=".View.MainActivity"
+            android:theme="@style/FirstTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
