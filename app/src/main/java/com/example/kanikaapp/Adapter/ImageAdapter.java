@@ -43,6 +43,10 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
                 .centerCrop()
                 .into(holder.imageView);
 
+        holder.categoryView.setText(sparePartCurrent.getCategory());
+        holder.priceView.setText(sparePartCurrent.getPrice());
+        holder.phoneView.setText(sparePartCurrent.getPhoneNumber());
+
     }
 
     @Override
@@ -52,6 +56,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
     public class ImageViewHolder extends  RecyclerView.ViewHolder{
         public TextView textViewName;
+        public TextView categoryView;
+        public TextView priceView;
+        public TextView phoneView;
         public ImageView imageView;
 
         public ImageViewHolder(View itemView){
@@ -59,6 +66,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
             textViewName= itemView.findViewById(R.id.text_view_name);
             imageView= itemView.findViewById(R.id.image_view_upload);
+            categoryView= itemView.findViewById(R.id.compName);
+            priceView= itemView.findViewById(R.id.price);
+            phoneView= itemView.findViewById(R.id.phoneNumber);
         }
     }
 }

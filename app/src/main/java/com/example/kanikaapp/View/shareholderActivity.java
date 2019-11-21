@@ -42,6 +42,9 @@ public class shareholderActivity extends AppCompatActivity {
     private Button mButtonUpload;
     private TextView mTextViewShowUploads;
     private EditText mEditTextFileName;
+    private EditText mEditCategory;
+    private EditText mEditPrice;
+    private EditText mEditPhone;
     private ImageView mImageView;
     private ProgressBar mProgressBar;
 
@@ -61,6 +64,9 @@ public class shareholderActivity extends AppCompatActivity {
         mButtonUpload = findViewById(R.id.button_upload);
         mTextViewShowUploads = findViewById(R.id.text_view_show_uploads);
         mEditTextFileName = findViewById(R.id.edit_text_file_name);
+        mEditCategory= findViewById(R.id.compName);
+        mEditPrice= findViewById(R.id.price);
+        mEditPhone = findViewById(R.id.phoneNumber);
         mImageView = findViewById(R.id.image_view);
         mProgressBar = findViewById(R.id.progress_bar);
 
@@ -163,7 +169,11 @@ public class shareholderActivity extends AppCompatActivity {
 
 
                                             SparePart upload = new SparePart(mEditTextFileName.getText().toString().trim(),
-                                                    downloadUri.toString());
+
+                                                    downloadUri.toString(),
+                                                    mEditCategory.getText().toString().trim(),
+                                                    mEditPrice.getText().toString().trim(),
+                                                    mEditPhone.getText().toString().trim());
 
                                             String uploadId = mDatabaseRef.push().getKey();
                                             mDatabaseRef.child(uploadId).setValue(upload);
