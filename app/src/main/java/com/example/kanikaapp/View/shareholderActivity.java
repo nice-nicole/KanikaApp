@@ -165,7 +165,8 @@ public class shareholderActivity extends AppCompatActivity {
                                             SparePart upload = new SparePart(mEditTextFileName.getText().toString().trim(),
                                                     downloadUri.toString());
 
-                                            mDatabaseRef.push().setValue(upload);
+                                            String uploadId = mDatabaseRef.push().getKey();
+                                            mDatabaseRef.child(uploadId).setValue(upload);
                                         } else
                                         {
                                             Toast.makeText(shareholderActivity.this, "upload failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -179,10 +180,10 @@ public class shareholderActivity extends AppCompatActivity {
 
 
 
-                            SparePart upload = new SparePart(mEditTextFileName.getText().toString().trim(),
-                                    taskSnapshot.getStorage().getDownloadUrl().toString());
-                            String uploadId = mDatabaseRef.push().getKey();
-                            mDatabaseRef.child(uploadId).setValue(upload);
+//                            SparePart upload = new SparePart(mEditTextFileName.getText().toString().trim(),
+//                                    taskSnapshot.getStorage().getDownloadUrl().toString());
+//                            String uploadId = mDatabaseRef.push().getKey();
+//                            mDatabaseRef.child(uploadId).setValue(upload);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

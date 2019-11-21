@@ -8,6 +8,10 @@
     android:padding="16dp"
     tools:context=".View.shareholderActivity">
 
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
     <Button
         android:id="@+id/button_choose_image"
         android:layout_width="wrap_content"
@@ -21,18 +25,59 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/button_choose_image"
         android:layout_toRightOf="@+id/button_choose_image"
-        android:hint="Enter file name"
+        android:hint="Enter spare part name"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:fontFamily="@font/berkshire_swash" />
 
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/edit_text_file_name"
-        android:layout_above="@+id/progress_bar"
-        android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/compName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="car's category"
+            android:layout_below="@+id/edit_text_file_name"
+            android:layout_toEndOf="@+id/button_choose_image"
+            android:layout_toRightOf="@+id/button_choose_image"
+            android:fontFamily="@font/berkshire_swash" />
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/compName"
+            android:hint="price"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_toEndOf="@+id/button_choose_image"
+            android:layout_toRightOf="@+id/button_choose_image"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/berkshire_swash"/>
+
+        <EditText
+            android:id="@+id/phoneNumber"
+           android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/price"
+         android:hint="phone number"
+            android:inputType="phone"
+          android:textColor="@android:color/black"
+           android:textSize="20sp"
+            android:layout_toEndOf="@+id/button_choose_image"
+           android:layout_toRightOf="@+id/button_choose_image"
+          android:layout_marginStart="16dp"
+          android:layout_marginLeft="16dp"
+          android:fontFamily="@font/berkshire_swash"/>
+
+            <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/phoneNumber"
+            android:layout_above="@+id/progress_bar"
+            android:layout_marginTop="16dp"/>
+
 
     <ProgressBar
         android:id="@+id/progress_bar"
@@ -67,57 +112,6 @@
         android:textSize="16sp"
         android:gravity="center"
         android:fontFamily="@font/berkshire_swash" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/headerTxt"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Kanika System"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textStyle="bold"-->
-<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
-<!--        android:textColor="@color/white"/>-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_above="@+id/button_zone"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:src="@drawable/spareparts33"-->
-<!--        android:contentDescription="FirebaseRecyclerImagesUploadDownload"/>-->
-
-<!--    <LinearLayout-->
-<!--        android:id="@+id/button_zone"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_centerHorizontal="true">-->
-
-
-<!--       <Button-->
-<!--           android:id="@+id/openSparePartsActivityBtn"-->
-<!--           style="?android:attr/button"-->
-<!--           android:layout_width="0dp"-->
-<!--           android:layout_height="wrap_content"-->
-<!--           android:layout_weight="1"-->
-<!--           android:text="View All"-->
-<!--           android:textColor="@color/dark"/>-->
-
-
-<!--        <Button-->
-<!--            android:id="@+id/openUploadActivityBtn"-->
-<!--            style="?android:attr/button"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:clickable="true"-->
-<!--            android:text="Add New"-->
-<!--            android:textColor="@color/dark"/>-->
-
-
-<!--    </LinearLayout>-->
-
-
 
 
 </RelativeLayout>
