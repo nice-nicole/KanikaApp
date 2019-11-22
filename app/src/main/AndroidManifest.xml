@@ -11,17 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.ImagesActivity"
-            android:label="Spare parts"></activity>
-
-        <activity android:name=".View.shareholderActivity"
-            android:label="Uploading spare parts"/>
+        <activity android:name=".View.UserActivity"></activity>
+        <activity
+            android:name=".View.ImagesActivity"
+            android:label="Spare parts" />
+        <activity
+            android:name=".View.shareholderActivity"
+            android:label="Uploading spare parts" />
         <activity android:name=".View.UploadActivity" />
-
-        <activity android:name=".View.SignupActivity"
-            android:label="signup"/>
-        <activity android:name=".View.LoginActivity"
-            android:label="login"/>
+        <activity
+            android:name=".View.SignupActivity"
+            android:label="signup" />
+        <activity
+            android:name=".View.LoginActivity"
+            android:label="login" />
         <activity
             android:name=".View.MainActivity"
             android:theme="@style/AppTheme">
@@ -31,7 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

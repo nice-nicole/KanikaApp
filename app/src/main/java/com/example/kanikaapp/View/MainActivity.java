@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import com.example.kanikaapp.R;
 
@@ -18,41 +20,40 @@ public class MainActivity extends AppCompatActivity {
 
     private Button startBtn;
 
+    ViewFlipper v_flipper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startBtn = (Button) findViewById(R.id.startButton);
+        int images[] = {R.drawable.spareparts1, R.drawable.spareparts2, R.drawable.spareparts3};
+        v_flipper= findViewById(R.id.v_flipper);
 
-        startBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, com.example.kanikaapp.View.SignupActivity.class));
-            }
-        });
+//        startBtn = (Button) findViewById(R.id.startButton);
+//
+//        startBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(MainActivity.this, com.example.kanikaapp.View.SignupActivity.class));
+//            }
+//        });
+        for (int image:images){
+            flipperImages(image);
+        }
 
-        TextView textview = (TextView)findViewById(R.id.txt);
-        Animation textAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim);
-        textview.startAnimation(textAnim);
+    }
+    public void flipperImages(int image){
+        ImageView imageView= new ImageView(this);
+        imageView.setBackgroundResource(image);
+        v_flipper.setAutoStart(true);
 
-        textAnim.setAnimationListener(new Animation.AnimationListener() {
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(4000);
+        v_flipper.setAutoStart(true);
 
-            @Override
-            public void onAnimationStart(Animation textAnim) {
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation textAnim) {
-            }
-
-            @Override
-            public void onAnimationEnd(Animation textAnim) {
-                startActivity(new Intent(MainActivity.this, com.example.kanikaapp.View.LoginActivity.class));
-            }
-        });
-
+        v_flipper.setInAnimation(this, android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
 
     }
 
