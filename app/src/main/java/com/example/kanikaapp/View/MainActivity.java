@@ -1,6 +1,7 @@
 package com.example.kanikaapp.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +20,8 @@ import com.example.kanikaapp.R;
 public class MainActivity extends AppCompatActivity {
 
     private Button startBtn;
+    private CardView cardView1;
+    private CardView cardView2;
 
     ViewFlipper v_flipper;
 
@@ -38,6 +41,21 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(new Intent(MainActivity.this, com.example.kanikaapp.View.SignupActivity.class));
 //            }
 //        });
+        cardView1= findViewById(R.id.v_user);
+        cardView2= findViewById(R.id.v_shareholder);
+        cardView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, UserActivity.class));
+            }
+        });
+
+        cardView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+        });
         for (int image:images){
             flipperImages(image);
         }
