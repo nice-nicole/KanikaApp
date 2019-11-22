@@ -6,6 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".View.MainActivity">
 
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/header"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="#000"-->
+<!--        android:gravity="center" >-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:text="Kanika..."-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="20sp" />-->
+<!--    </RelativeLayout>-->
+
     <ViewFlipper
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -18,24 +36,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/v_flipper"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp">
+        android:orientation="vertical"
+        android:paddingLeft="100dp"
+        >
 
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:id="@+id/v_user"
-        android:layout_marginRight="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+
             >
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:background="@drawable/spareparts1"
+            android:background="@drawable/imagespare"
             android:id="@+id/img1"
             android:layout_marginBottom="2dp"
             />
@@ -44,7 +66,7 @@
                 android:id="@+id/txt1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="view spareparts"
+                android:text="spareparts"
                 android:textSize="20sp"
                 android:textAlignment="center"/>
 
@@ -65,12 +87,11 @@
                 android:orientation="vertical"
                 >
                 <ImageView
+                    android:id="@+id/img11"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:background="@drawable/ic_launcher_background"
-                    android:id="@+id/img11"
                     android:layout_marginBottom="2dp"
-                    />
+                    android:background="@drawable/imageshareholder" />
 
                 <TextView
                     android:id="@+id/txt11"
@@ -87,6 +108,33 @@
 
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/appN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Kanika.LTD"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Tel: 0786720958"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_below="@+id/appN"/>
+    </RelativeLayout>
 
 
 </RelativeLayout>

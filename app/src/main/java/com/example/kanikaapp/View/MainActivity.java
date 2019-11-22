@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int images[] = {R.drawable.spareparts1, R.drawable.spareparts2, R.drawable.spareparts3};
+        int images[] = {R.drawable.image4, R.drawable.image11, R.drawable.images12,R.drawable.image13};
         v_flipper= findViewById(R.id.v_flipper);
 
 //        startBtn = (Button) findViewById(R.id.startButton);
