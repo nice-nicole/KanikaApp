@@ -8,6 +8,7 @@ public class SparePart {
     private String mCategory;
     private String mPrice;
     private String mPhoneNumber;
+    private String mKey;
 
     public SparePart() {
         //empty constructor needed
@@ -65,6 +66,16 @@ public class SparePart {
 
     public String getPhoneNumber() {
         return mPhoneNumber;
+    }
+
+    @Exclude
+    public String getKey() {
+        return mKey;
+    }
+
+    @Exclude
+    public void setKey(String key) {
+        mKey = key;
     }
 
 

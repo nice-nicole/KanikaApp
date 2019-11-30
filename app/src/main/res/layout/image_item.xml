@@ -30,13 +30,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_below="@id/image_view_upload">
+
 
         <TextView
             android:id="@+id/compName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="category"
             android:layout_gravity="center_horizontal"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
@@ -50,6 +52,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:hint="price"
+            android:layout_marginLeft="2dp"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
 
@@ -64,7 +67,8 @@
             android:textSize="20sp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="2dp"/>
 
         </LinearLayout>
 
